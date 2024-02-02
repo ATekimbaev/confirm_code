@@ -4,6 +4,7 @@ import 'package:token/core/config/network/dio_settings.dart';
 import 'package:token/data/repositories/auth_repositroy.dart';
 import 'package:token/presentation/cubuits/cubit/confirm_code_cubit.dart';
 import 'package:token/presentation/cubuits/registr_cubit/registr_cubit.dart';
+import 'package:token/presentation/screens/confirm_screen.dart';
 import 'package:token/presentation/screens/registr_screen.dart';
 
 void main() {
@@ -38,15 +39,18 @@ class MyApp extends StatelessWidget {
           ),
         ],
         child: MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(
+            fontFamily: "Poppins",
             appBarTheme: const AppBarTheme(
+
               backgroundColor: Colors.red,
             ),
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: const RegistrScreen(),
+          home: const ConfirmCodeScreen(),
         ),
       ),
     );

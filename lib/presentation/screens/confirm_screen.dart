@@ -65,10 +65,7 @@ class _PinputExampleState extends State<ConfirmCodeScreen> {
                     defaultPinTheme: defaultPinTheme,
                     separatorBuilder: (index) => const SizedBox(width: 8),
                     validator: (value) {},
-                    // onClipboardFound: (value) {
-                    //   debugPrint('onClipboardFound: $value');
-                    //   pinController.setText(value);
-                    // },
+                  
                     hapticFeedbackType: HapticFeedbackType.lightImpact,
                     onCompleted: (pin) {
                       BlocProvider.of<ConfirmCodeCubit>(context)
@@ -107,12 +104,16 @@ class _PinputExampleState extends State<ConfirmCodeScreen> {
                     ),
                   ),
                 ),
-                TextButton(
-                  onPressed: () {
-                    focusNode.unfocus();
-                    formKey.currentState!.validate();
-                  },
-                  child: const Text('Send'),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 30),
+                  child: TextButton(
+                    
+                    onPressed: () {
+                      focusNode.unfocus();
+                      formKey.currentState!.validate();
+                    },
+                    child: const Text('Send',),
+                  ),
                 ),
               ],
             ),
